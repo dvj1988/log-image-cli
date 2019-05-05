@@ -35,11 +35,12 @@ function getImageBufferData(path) {
 
 function renderImage(path) {
   const { data, width, height } = getImageBufferData(path);
+  const terminalWidth = Math.floor(process.stdout.columns / 2);
   const {
     data: resizedImage,
     width: newWidth,
     height: newHeight
-  } = resizeImageWithNewWidth(data, width, height, 80);
+  } = resizeImageWithNewWidth(data, width, height, terminalWidth);
 
   for (let i = 0; i < newHeight; i++) {
     let rowColors = [];
@@ -64,7 +65,7 @@ function renderImage(path) {
   }
 }
 
-renderImage("./download.jpeg");
+renderImage("./card.png");
 
 function resizeImageWithNewWidth(
   imageData,
@@ -72,11 +73,11 @@ function resizeImageWithNewWidth(
   actualHeight,
   targetWidth
 ) {
-  const resizeFactor = Math.ceil(actualWidth / targetWidth);
+  const resizeFactor = Math.floor(actualWidth / targetWidth);
   if (resizeFactor > 1) {
     let y = 0;
     let resizedImageData = [];
-    const targetHeight = Math.ceil(actualHeight / resizeFactor);
+    const targetHeight = Math.floor(actualHeight / resizeFactor);
     while (y < targetHeight) {
       // Iterate through each row of the canvas. Incremented in units of tile height
       let x = 0;

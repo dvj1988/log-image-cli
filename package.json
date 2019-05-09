@@ -1,11 +1,20 @@
 {
-  "name": "image-on-cli",
-  "version": "0.0.1",
+  "name": "@diljitvj/imgcli",
+  "version": "0.0.8",
   "description": "Log images in the cli",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "imgcli": "index.js"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "keywords": [
+    "imgcli"
+  ],
   "author": "Diljit VJ",
   "license": "ISC",
   "dependencies": {

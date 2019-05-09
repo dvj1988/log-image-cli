@@ -1,6 +1,6 @@
 {
   "name": "@diljitvj/imgcli",
-  "version": "0.0.8",
+  "version": "0.0.11",
   "description": "Log images in the cli",
   "main": "index.js",
   "scripts": {

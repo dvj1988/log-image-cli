@@ -1,2 +1,6 @@
 #! /usr/bin/env node
-console.log("hello, I am a cli!");
+const logImg = require("log-image");
+const path = require("path");
+const filePath = process.argv[2];
+
+console.log(logImg(path.resolve(filePath)));

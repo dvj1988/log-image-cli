@@ -18,6 +18,6 @@
   "author": "Diljit VJ",
   "license": "ISC",
   "dependencies": {
-    "log-image": "0.0.1"
+    "log-image": "0.0.5"
   }
 }
